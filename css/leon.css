@@ -47,6 +47,10 @@ body{
 html{
     scroll-behavior: smooth;
 }
+::selection{
+    background-color: var(--main-color);
+    color: var(--secondary-color);
+}
 /* Small */
 @media (min-width : 768px) {
     .contuner{
@@ -72,17 +76,6 @@ html{
     display: flex;
     justify-content: center;
 }
-/* @media (max-width : 767px) {
-    .header .logo{
-    left: 30px;
-    position: absolute;
-    }
-    .header .links{
-        display: inline-block;
-        position: absolute !important; 
-        right: 30px;
-    }
-} */
 .header .contuner{
     width: 80%;
     padding: 15px;
@@ -458,3 +451,37 @@ html{
     font-weight: 600;
 }
 /* End Fotter */
+.scroll div{
+    width: 20px;
+    height: 20px;
+    position: fixed;
+    transform: rotateZ(-45deg);
+    background-color: transparent;
+    border-top: var(--main-color) solid 4px;
+    border-right: var(--main-color) solid 4px;
+}
+.scroll div:nth-child(1){
+    right: 20px;
+    bottom: 30px;
+    transform: rotateZ(-45deg);
+}
+/* Start Scroll */
+.scroll div:nth-child(2){
+    right: 20px;
+    bottom: 20px;
+    transform: rotateZ(-45deg);
+    border-top: var(--main-color) solid 4px;
+    border-right: var(--main-color) solid 4px;
+}
+.scroll div:last-child{
+    right: 20px;
+    bottom: 10px;
+    transform: rotateZ(-45deg);
+    border-top: var(--main-color) solid 4px;
+    border-right: var(--main-color) solid 4px;
+}
+.scroll:hover{
+    cursor: pointer;
+}
+/* End Scroll */
+
